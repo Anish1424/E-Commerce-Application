@@ -1,0 +1,127 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Nunito&family=Palanquin+Dark:wght@500&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title> EcommerceStore</title>
+</head>
+
+<body>
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color: darkslategrey;" >
+        <div class="container" >
+            <a class="navbar-brand" href="#">ShopSmart</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </ul>
+    <nav id="nav">
+        <div class="navTop">
+            <div class="navItem">
+                <h2>EcommerceStore.com</h2>
+                <!-- <img decoding="async" src="./img/sneakers.png" alt=""> -->
+            </div>
+            <div class="navItem">
+                <div class="container">
+                    <h1 class="text-center mt-4">Search</h1>
+                    <form action="/search" method="post" class="search-form mt-4">
+                        <input type="text" name="search_query" class="search-input" placeholder="Search Product" >
+                        <button type="submit" class="search-button">Search</button>
+                    </form>
+                </div>
+            </div>
+            <div class="navItem">
+                <span class="limitedOffer">Limited Offer!</span>
+            </div>
+        </div>
+        <div class="navBottom">
+            <h3 class="menuItem" >BEST DEALS</h3>
+            <a href="https://www.amazon.in/"><h3 class="menuItem">AMAZON</h3></a>
+            <a href="https://www.flipkart.com/"><h3 class="menuItem">FLIPKART</h3></a>
+            <a href="https://www.ajio.com/"><h3 class="menuItem">AJIO</h3></a>
+            <a href="https://www.meesho.com/"><h3 class="menuItem">MEESHO</h3></a>
+        </div>
+    </nav>
+    <div class="features">
+        <div class="feature">
+            <img decoding="async" src="{{ url_for('static',filename='images/free.png.png') }}" alt="" class="featureIcon">
+            <span class="featureTitle">FREE SHIPPING</span>
+            <span class="featureDesc">Free worldwide shipping on all orders.</span>
+        </div>
+        <div class="feature">
+            <img decoding="async" class="featureIcon" src="{{ url_for('static',filename='images/return.png') }}" alt="">
+            <span class="featureTitle">30 DAYS RETURN</span>
+            <span class="featureDesc">No question return and easy refund in 14 days.</span>
+        </div>
+        <div class="feature">
+            <img decoding="async" class="featureIcon" src="{{ url_for('static',filename='images/gift.png') }}" alt="">
+            <span class="featureTitle">GIFT CARDS</span>
+            <span class="featureDesc">Buy gift cards and use coupon codes easily.</span>
+        </div>
+        <div class="feature">
+            <img decoding="async" class="featureIcon" src="{{ url_for('static',filename='images/Contact.png') }}"  alt="">
+            <span class="featureTitle">CONTACT US!</span>
+            <span class="featureDesc">Keep in touch via email and support system.</span>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerLeft">
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">About Us</h1>
+                <ul class="fList">
+                    <li class="fListItem">Company</li>
+                    <li class="fListItem">Contact</li>
+                    <li class="fListItem">Careers</li>
+                    <li class="fListItem">Affiliates</li>
+                    <li class="fListItem">Stores</li>
+                </ul>
+            </div>
+            <div class="footerMenu">
+                <h1 class="fMenuTitle">Useful Links</h1>
+                <ul class="fList">
+                    <li class="fListItem">Support</li>
+                    <li class="fListItem">Refund</li>
+                    <li class="fListItem">FAQ</li>
+                    <li class="fListItem">Feedback</li>
+                    <li class="fListItem">Stories</li>
+                </ul>
+            </div>
+            <div class="footerRightMenu">
+                <h1 class="fMenuTitle">Follow Us</h1>
+                <div class="fIcons">
+                    <img decoding="async" src="fb.png" alt="" class="fIcon">
+                    <img decoding="async" src="twit.png" alt="" class="fIcon">
+                    <img decoding="async" src="insta.png" alt="" class="fIcon">
+                    <img decoding="async" src="whatsapp.png" alt="" class="fIcon">
+                </div>
+            </div>
+            <div class="footerRightMenu">
+                <span class="copyright">@John Doe. All rights reserved. 2022.</span>
+            </div>
+        </div>
+    </footer>
+    <script src="{{ url_for('static',filename='js/script.js')}}"></script>
+</body>
+
+</html>

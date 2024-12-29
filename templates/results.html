@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS stylesheet -->
+    <style>
+        .results-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .results-column {
+            width: 45%; /* Adjust the width as needed */
+            border: 1px solid #2e2d2d;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .result {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Results...</h1>
+    <div class="results-container">
+        <div class="results-column">
+            <h2>From Amazon:</h2>
+            <ul>
+                {% for result in results1 %}
+                    <li>Name: {{ result.name }}, Price: {{ result.actual_price }}</li>
+                    <li><a href={{result.link}}>Click to Check</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="results-column">
+            <h2>From Flipkart:</h2>
+            <ul>
+                {% for result in results2 %}
+                    <li>Name: {{ result.name }}, Price: {{ result.actual_price }}</li>
+                    <li><a href={{result.link}}>Click to Check</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
